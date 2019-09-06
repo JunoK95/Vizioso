@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Vizioso Website">
+    <meta name="author" content="Juno Kim">
+    <link rel="icon" href="images/icon.png">
+
+    <title>Vizioso</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="styles/css/bootstrap.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+    <meta property="og:url"           content="http://www.gunjunkie.io" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="Vizioso" />
+    <meta property="og:description"   content="Vizioso - Customize your own p90 today and share it with your friends!" />
+    <meta id="metaImg" property="og:image"         content="http://www.gunjunkie.io/images/redirectPagesTiny/orange/orange.jpg" />
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body>
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '1536168246461810',
+            xfbml      : true,
+            version    : 'v2.10'
+          });
+          FB.AppEvents.logPageView();
+        };
+
+        (function(d, s, id){
+           var js, fjs = d.getElementsByTagName(s)[0];
+           if (d.getElementById(id)) {return;}
+           js = d.createElement(s); js.id = id;
+           js.src = "//connect.facebook.net/en_US/sdk.js";
+           fjs.parentNode.insertBefore(js, fjs);
+         }(document, 'script', 'facebook-jssdk'));
+      </script>
+      <img class="navLogo" src="images\png\ViziosoLogo.png"></img>
+      <a href="index.html"><img class="VizBrand" src="images/WebImages/ViziosoBranding.png"></img></a>
+      <img class="navBG" src="images\png\NavbarImg.png">
+          <nav class="navbar">
+              <ul class="navbarLinkGroup">
+                  <li class="navbarLink navbarDrop">
+                      <a class="MODELS drop" id="MODELS" target="_blank" href="http://steamcommunity.com/id/BrandonLe/myworkshopfiles/" value="OFF" onclick="DownMenu()">MODELS</a>
+                      <!-- <ul class="ModelsContent drop" id="ModelsContent">
+                          <li><a class="dropdownContent" href="#">USP-S</a></li>
+                          <li><a class="dropdownContent" href="#">M4A4</a></li>
+                          <li><a class="dropdownContent" href="#">AWP</a></li>
+                      </ul> -->
+                  </li>
+                  <li class="navbarLink"><a href="#" id="BuildBtn">BUILD</a></li>
+                  <li class="navbarBrand"><img src="images/WebImages/ViziosoBranding.png"></img></li>
+                  <li class="navbarLink"><a target="_blank" href="http://steamcommunity.com/groups/fnbrand">GROUP</a></li>
+                  <li class="navbarLink navbarDrop">
+                      <a class="Votes drop2" id="Votes" target="_blank" href="http://steamcommunity.com/sharedfiles/filedetails/?id=1113844607" value="OFF" onclick="DownMenu()">VOTE</a>
+                      <!-- <ul class="ModelsContent drop2" id="VoteContent">
+                          <li><a class="dropdownContent" href="#">Skulliosis</a></li>
+                          <li><a class="dropdownContent" href="#">NinthWonder</a></li>
+                          <li><a class="dropdownContent" href="#">Vizioso</a></li>
+                      </ul> -->
+                  </li>
+              </ul>
+          </nav>
+      </img>
+      <div id="ImageCarousel" class="ImageCarousel">
+          <ul class="carouselContent" onclick="carouselNext()">
+              <li>
+                  <div class="ImageView">
+                      <img class="ImageCarouselItems animate-left bodyLayer" src="images\colorimages\Body\1\orange.jpg"></img>
+                      <img class="ImageCarouselItems animate-left TriggerLayer" src="images\colorimages\Trigger\1\orange.png"></img>
+                  </div>
+              </li>
+              <li>
+                  <div class="ImageView">
+                      <img class="ImageCarouselItems animate-left bodyLayer" src="images\colorimages\Body\2\orange.jpg"></img>
+                      <img class="ImageCarouselItems animate-left TriggerLayer" src="images\colorimages\Trigger\2\orange.png"></img>
+                  </div>
+              </li>
+              <li>
+                  <div class="ImageView">
+                      <img class="ImageCarouselItems animate-left bodyLayer" src="images\colorimages\Body\3\orange.jpg"></img>
+                      <img class="ImageCarouselItems animate-left TriggerLayer" src="images\colorimages\Trigger\3\orange.png"></img>
+                      <img id="flagLayer" class="ImageCarouselItems animate-left flagLayer" src="images\flag.png"></img>
+                  </div>
+              </li>
+          </ul>
+          <div class="turnContainer">
+              <ul class="turnButtons">
+                  <li><div class="btnContainer"><img id="leftBtn" class="dirBtn" src="images\ViziosoImg\Buttons\btnLeft.png"></img></div></li>
+                  <li><div class="btnContainer"></div></li>
+                  <li><div class="btnContainer"><img id="rgtBtn" class="dirBtn" src="images\ViziosoImg\Buttons\btnRight.png"></img></div></li>
+              </ul>
+          </div>
+          <div class="fbbutton">
+              <img class="selectionButton" id="btnSubmit" src="images\ViziosoImg\Buttons\submit.png"></img>
+          </div>
+          <div class="buttonBar">
+              <img src="images\ViziosoImg\Buttons\Pallet.png">
+                  <ul class="selectionGroup">
+                      <li><img class="selectionButton" id="btnBody" src="images\ViziosoImg\Buttons\ChangeBody.png" onclick="selectionClicked('bod')"></img><img class="selectionButton" id="btnBodyClicked" src="images\ViziosoImg\Buttons\ChangeBodyClicked.png" onclick="selectionClicked('bod')"></img></li>
+                      <li><img class="selectionButton" id="btnTrigger" src="images\ViziosoImg\Buttons\ChangeTrigger.png" onclick="selectionClicked('trigger')"></img><img class="selectionButton" id="btnTriggerClicked" src="images\ViziosoImg\Buttons\ChangeTriggerClicked.png" onclick="selectionClicked('trigger')"></img></li>
+                      <li><img class="selectionButton" id="btnFlag" src="images\ViziosoImg\Buttons\ChangeFlag.png" onclick="selectionClicked('flag')"></img><img class="selectionButton" id="btnFlagClicked" src="images\ViziosoImg\Buttons\ChangeFlagClicked.png" onclick="selectionClicked('flag')"></img></li>
+                  </ul>
+                  <ul class="colorGroup">
+                      <li><img id="btnGray" src="images\ViziosoImg\Buttons\btnGray.png" onclick='colorClicked("gray")'></img></li>
+                      <li><img id="btnGreen" src="images\ViziosoImg\Buttons\btnGreen.png" onclick="colorClicked('green')"></img></li>
+                      <li><img id="btnOrange" src="images\ViziosoImg\Buttons\btnOrange.png" onclick="colorClicked('orange')"></img></li>
+                      <li><img id="btnPurple" src="images\ViziosoImg\Buttons\btnPurple.png" onclick="colorClicked('purple')"></img></li>
+                      <li><img id="btnOrange" src="images\ViziosoImg\Buttons\btnRed.png" onclick="colorClicked('red')"></img></li>
+                      <li><img id="btnYellow" src="images\ViziosoImg\Buttons\btnYellow.png" onclick="colorClicked('yellow')"></img></li>
+                      <li><img id="btnBlue" src="images\ViziosoImg\Buttons\btnBlue.png" onclick="colorClicked('blue')"></img></li>
+                  </ul>
+              </img>
+          </div>
+      </div>
+      <div class="Section" id="section1">
+          <div class="SectionTextbox" id="text1">
+              <h2>PERFORMANCE</h2>
+              <p>A power unit with performance figures at high <br />
+                  levels - the v8 turbo with two inner-V turbos is <br />
+                  designed for top performance, and dynamic <br />
+                   engine mounts adapt to any situation. <br />
+                   The gun impresses its clearly enhanced <br />
+                   potential.  Brutal, when the v8 turbo <br />
+                   fires with its output of 1184 rpm <br />
+                   and 734 joules of energy.
+              </p>
+          </div>
+          <img class="FeatureImages" src="images\png\img1.png"></img>
+      </div>
+      <div class="Section" id="section2">
+          <div class="SectionTextbox" id="text2">
+              <h2>EXTERIOR DESIGN</h2>
+              <p>Working on the design of an icon like the p90 means not altering its character but exalting it even more.  Vizioso P90 continues to display the unmistakable GunJunkie DNA, while <br /> strengthening its mix of dynamism, refinement and aggressiveness by means of sharper lines inspired by nature and aeronautics.
+              </p>
+          </div>
+          <img class="FeatureImages" src="images\png\img2.png"></img>
+      </div>
+      <div class="Section" id="section3">
+          <div class="SectionTextbox" id="text3">
+              <h2>INNOVATION</h2>
+              <p>
+                  Thrilling, when the Vizioso p90 <br />
+                  is firing.  Magnificent, when the GJ <br />
+                  DCT-7 transmission translates the power <br />
+                  into acceleration.  Even more magnificent, the <br />
+                  carbon forged materials of the clip allow a reload <br />
+                  time of 1.9 seconds.
+              </p>
+          </div>
+          <img class="FeatureImages" src="images\png\img3.png"></img>
+      </div>
+      <div class="TriStateArea">
+          <div class="Section" id="section4">
+              <img class="FeatureImages" src="images\png\img4.png"></img>
+          </div>
+          <div class="Section" id="section5">
+              <img class="FeatureImages" src="images\png\img5.png"></img>
+          </div>
+          <div class="Section" id="section6">
+              <img class="FeatureImages" src="images\png\img6.png"></img>
+          </div>
+      </div>
+      <div class="Section" id="section7">
+          <div class="SectionTextbox" id="text4">
+              <h2>HAND BUILT</h2>
+              <p>
+                 Whether its the hand-crafted craftsman- <br />
+                 ship of the “One Man - One Gun” philosophy <br />
+                 of the ever advancing technological leadership of <br />
+                 the latest P90, a Vizioso is developed not just to <br />
+                 perform, but to outperform.  Its just one of the many <br />
+                 high-performance weapons in our engineering
+                 arsenal.
+              </p>
+          </div>
+          <img class="FeatureImages" src="images\png\img7.png"></img>
+      </div>
+      <div class="intro" id="intro" onload="fadeOut(this)">
+          <img src="images\png\ViziosoLogo.png" alt=""></img>
+      </div>
+      <div class="buildModal" id="buildModal">
+          <a id="redirectLink" href="orangeorange.html"><img class="selectionButton" id="btnSubmit2" src="images\ViziosoImg\Buttons\submit.png"></img></a>
+          <img id="modalImage" src="images\redirectPagesTiny\orange\orange.jpg" alt=""></img>
+      </div>
+      <div class="BuildBoundary">
+      </div>
+      <!-- FOOTER -->
+      <footer>
+      </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="styles\js\ScrollAnimation.js"></script>
+    <script src="styles\js\startup.js"></script>
+    <script src="styles\js\colorChanger.js"></script>
+    <script src="styles/js/buttonFunction.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  </body>
+</html>
